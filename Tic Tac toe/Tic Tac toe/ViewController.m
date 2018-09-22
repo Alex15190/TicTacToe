@@ -39,6 +39,6 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[collectionView cellForItemAtIndexPath:indexPath] setNeedsDisplay];
+    [[[collectionView cellForItemAtIndexPath:indexPath] viewWithTag:2] setNeedsDisplay];
 }
 @end
