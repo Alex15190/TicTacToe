@@ -7,15 +7,45 @@
 //
 
 #import "TTTTicTacView.h"
+#import "EnumForGame.h"
 
 @implementation TTTTicTacView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
+
 - (void)drawRect:(CGRect)rect {
-    // Drawing code
+    NSInteger i = arc4random()%2;
+    if (i == 1)
+        [self drawO];
+    else
+        [self drawX];
 }
-*/
+
+- (void)drawX
+{
+    UIBezierPath *path = [[UIBezierPath alloc] init];
+    [path moveToPoint:CGPointMake(0 + 10, 0 + 10)];
+    [path addLineToPoint:CGPointMake(self.bounds.size.width - 10, self.bounds.size.height - 10)];
+    [path moveToPoint:CGPointMake(self.bounds.size.width - 10, 0 + 10)];
+    [path addLineToPoint:CGPointMake(0 + 10, self.bounds.size.height - 10)];
+    [[UIColor redColor] setStroke];
+    path.lineWidth = 3.0;
+    [path stroke];
+    [self setNeedsDisplay];
+}
+
+- (void)drawO
+{
+    UIBezierPath *path = [[UIBezierPath alloc] init];
+    [path appendPath:[UIBezierPath bezierPathWithOvalInRect:CGRectMake(10, 10, self.bounds.size.width - 20, self.bounds.size.height - 20)]];
+    [[UIColor greenColor] setStroke];
+    path.lineWidth = 3.0;
+    [path stroke];
+    [self setNeedsDisplay];
+}
+
+- (void)clear
+{
+    [self setNeedsDisplay];
+}
 
 @end

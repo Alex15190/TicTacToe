@@ -9,5 +9,11 @@
 #ifndef EnumForGame_h
 #define EnumForGame_h
 
+typedef NS_ENUM(NSInteger,GameViewState)
+{
+    GameViewStateX,
+    GameViewStateO,
+    GameViewStateEmpty
+};
 
 #endif /* EnumForGame_h */
