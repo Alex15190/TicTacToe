@@ -24,6 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.playerOne = YES;
+    self.collectionView.alpha = 0.7;
 }
 
 
