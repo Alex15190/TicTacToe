@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EnumForGame.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TTTTicTacView : UIView
+
+@property (nonatomic) GameViewState state;
+
+- (void)drawX;
+- (void)drawO;
+- (void)clear;
 
 @end
 

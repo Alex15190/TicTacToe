@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -39,6 +40,8 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[[collectionView cellForItemAtIndexPath:indexPath] viewWithTag:2] setNeedsDisplay];
+    TTTTicTacView *gameView = [[collectionView cellForItemAtIndexPath:indexPath] viewWithTag:2];
+    gameView.state = GameViewStateX;
+    [gameView setNeedsDisplay];
 }
 @end

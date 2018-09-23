@@ -11,9 +11,9 @@
 
 typedef NS_ENUM(NSInteger,GameViewState)
 {
+    GameViewStateEmpty,
     GameViewStateX,
-    GameViewStateO,
-    GameViewStateEmpty
+    GameViewStateO
 };
 
 #endif /* EnumForGame_h */

@@ -7,21 +7,28 @@
 //
 
 #import "TTTTicTacView.h"
-#import "EnumForGame.h"
 
 @implementation TTTTicTacView
 
 
 - (void)drawRect:(CGRect)rect {
-    NSInteger i = arc4random()%2;
-    if (i == 1)
-        [self drawO];
-    else
-        [self drawX];
+    switch (self.state) {
+        case GameViewStateX:
+            [self drawX];
+            break;
+        case GameViewStateO:
+            [self drawO];
+            break;
+        case GameViewStateEmpty:
+            [self clear];
+            break;
+    }
 }
 
 - (void)drawX
 {
+    self.state = GameViewStateX;
+    
     UIBezierPath *path = [[UIBezierPath alloc] init];
     [path moveToPoint:CGPointMake(0 + 10, 0 + 10)];
     [path addLineToPoint:CGPointMake(self.bounds.size.width - 10, self.bounds.size.height - 10)];
@@ -35,6 +42,8 @@
 
 - (void)drawO
 {
+    self.state = GameViewStateO;
+    
     UIBezierPath *path = [[UIBezierPath alloc] init];
     [path appendPath:[UIBezierPath bezierPathWithOvalInRect:CGRectMake(10, 10, self.bounds.size.width - 20, self.bounds.size.height - 20)]];
     [[UIColor greenColor] setStroke];
@@ -45,6 +54,8 @@
 
 - (void)clear
 {
+    self.state = GameViewStateEmpty;
+    
     [self setNeedsDisplay];
 }
 
