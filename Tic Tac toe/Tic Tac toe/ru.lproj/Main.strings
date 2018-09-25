@@ -1,0 +1,6 @@
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "Fa6-qy-LxX"; */
+"Fa6-qy-LxX.normalTitle" = "Перезапуск";
+
+/* Class = "UILabel"; text = "Tic Tac toe"; ObjectID = "oHE-UA-aak"; */
+"oHE-UA-aak.text" = "Крестики-нолики";
