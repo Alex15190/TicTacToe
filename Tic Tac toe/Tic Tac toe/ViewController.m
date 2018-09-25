@@ -14,6 +14,7 @@ static const NSInteger kNumOfLines = 5;
 static const NSInteger kNumOfCells = 25;
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @property (nonatomic, strong) CAShapeLayer *layer;
 @property (nonatomic, assign) BOOL playerOne;
@@ -31,6 +32,10 @@ static const NSInteger kNumOfCells = 25;
     self.playerOne = YES;
     self.collectionView.alpha = 0.7;
     self.acc = [[NSMutableArray alloc] init];
+    NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:self.titleLabel.text];
+    [title addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, 8)];
+    [title addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(9, [self.titleLabel.text length] - 9)];
+    self.titleLabel.attributedText = title;
 }
 
 

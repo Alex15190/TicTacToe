@@ -100,6 +100,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="UFS-fG-SQJ" id="YhB-qR-x1A"/>
+                        <outlet property="titleLabel" destination="oHE-UA-aak" id="jW4-zq-ZV7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
