@@ -41,27 +41,28 @@
                                 </connections>
                             </button>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UFS-fG-SQJ">
-                                <rect key="frame" x="16" y="57" width="288" height="288"/>
+                                <rect key="frame" x="0.0" y="57" width="320" height="320"/>
                                 <color key="backgroundColor" red="0.1729410227487129" green="0.30970514360773521" blue="0.61419203367875652" alpha="0.39840999119718312" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UFS-fG-SQJ" secondAttribute="height" multiplier="1:1" id="Woc-Ka-GDt"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="Eai-ne-vog">
-                                    <size key="itemSize" width="92" height="92"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="Eai-ne-vog">
+                                    <size key="itemSize" width="63" height="63"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TicTacID" id="l6f-A5-Rk0">
-                                        <rect key="frame" x="2" y="2" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view opaque="NO" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6id-R1-Wm3" customClass="TTTTicTacView">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <color key="backgroundColor" red="0.43945743879999999" green="0.35658184069999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="6id-R1-Wm3" secondAttribute="height" multiplier="1:1" id="BHR-aV-b3i"/>
                                                     </constraints>
@@ -74,7 +75,6 @@
                                             <constraint firstAttribute="trailing" secondItem="6id-R1-Wm3" secondAttribute="trailing" id="hUb-O8-Rlg"/>
                                             <constraint firstItem="6id-R1-Wm3" firstAttribute="top" secondItem="l6f-A5-Rk0" secondAttribute="top" id="jpg-7P-Erm"/>
                                         </constraints>
-                                        <size key="customSize" width="100" height="100"/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -87,7 +87,7 @@
                         <constraints>
                             <constraint firstItem="dMs-aA-1FN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BdV-cO-wcr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dMs-aA-1FN" secondAttribute="trailing" id="Dfs-1r-sN0"/>
-                            <constraint firstItem="UFS-fG-SQJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="I6y-gX-pUb"/>
+                            <constraint firstItem="UFS-fG-SQJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="I6y-gX-pUb"/>
                             <constraint firstItem="Fa6-qy-LxX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NWv-R1-Tw5"/>
                             <constraint firstItem="UFS-fG-SQJ" firstAttribute="top" secondItem="oHE-UA-aak" secondAttribute="bottom" constant="8" id="Pit-5g-hBs"/>
                             <constraint firstItem="dMs-aA-1FN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="c1m-LW-V9T"/>
