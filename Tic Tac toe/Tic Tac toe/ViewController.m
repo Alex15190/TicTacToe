@@ -134,6 +134,8 @@ static const NSInteger kNumOfCells = 25;
         TTTTicTacView *gameView = [[self.collectionView cellForItemAtIndexPath:customIndexPath] viewWithTag:2];
         if (gameView.state == state)
         {
+            if ((labs(indexPath.row % kNumOfLines - customIndexPath.row % kNumOfLines) == 4) || (labs(indexPath.row % kNumOfLines - customIndexPath.row % kNumOfLines) == 6))
+                return;
             [self.acc addObject:@1];
             [self checkStateInCellAtIndexPath:customIndexPath forState:state withStep:step];
         }
